@@ -28,3 +28,32 @@ function generatePassword() {
 }
 
 generateBtn.addEventListener("click", generatePassword);
+
+const copyBtn = document.getElementById("copy-btn");
+function copyPassword() {
+    const password = resultText.textContent;
+
+    if (password === "Тут будет пароль" || password === "") {
+        alert("Сначала сгенерируй пароль!");
+        return;
+    }
+
+    navigator.clipboard.writeText(password)
+        .then(() => {
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = "Скопировано! ✅";
+            copyBtn.style.backgroundColor = "#ffe600";
+            copyBtn.style.color = "#141414";
+
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+                copyBtn.style.backgroundColor = "transparent";
+                copyBtn.style.color = "#ffe600";
+            }, 1500);
+        })
+        .catch(err => {
+            console.error("Не удалось скопировать: ", err);
+        });
+}
+
+copyBtn.addEventListener("click", copyPassword);

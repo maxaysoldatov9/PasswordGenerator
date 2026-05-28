@@ -63,6 +63,35 @@ h1 {
     word-break: break-all;
 }
 
+.result-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 15px;
+}
+
+#copy-btn {
+    background: transparent;
+    border: 1px solid #333333;
+    color: #ffe600;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap; 
+}
+
+#copy-btn:hover {
+    background-color: #ffe600;
+    color: #141414;
+    border-color: #ffe600;
+}
+
+#copy-btn:active {
+    transform: scale(0.95);
+}
+
 .settings {
     display: flex;
     flex-direction: column;
