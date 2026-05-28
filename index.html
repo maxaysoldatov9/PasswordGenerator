@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Генератор Паролей</h1>
+        
+        <div class="result-container">
+            <span id="result-text">Тут будет пароль</span>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Длина пароля</label>
+                <input type="number" id="length-input" min="4" max="30" value="10">
+            </div>
+        </div>
+
+        <button id="generate-btn">Сгенерировать</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
